@@ -1175,9 +1175,9 @@
 			var icoStyle = [];
 			if (!node.isAjaxing) {
 				var icon = (node.isParent && node.iconOpen && node.iconClose) ? (node.open ? node.iconOpen : node.iconClose) : node.icon;
-				if (icon) icoStyle.push("background:url(", icon, ") 0 0 no-repeat;");
+				if (icon) icoStyle.push("content:url(", icon, ") 0 0 no-repeat;height:16px;");
 				if (setting.view.showIcon == false || !tools.apply(setting.view.showIcon, [setting.treeId, node], true)) {
-					icoStyle.push("width:0px;height:0px;");
+					icoStyle.push("display:none;");
 				}
 			}
 			return icoStyle.join('');

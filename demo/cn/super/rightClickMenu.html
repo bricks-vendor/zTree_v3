@@ -126,13 +126,26 @@
 		//-->
 	</SCRIPT>
 	<style type="text/css">
-div#rMenu {position:absolute; visibility:hidden; top:0; background-color: #555;text-align: left;padding: 2px;}
+div#rMenu {
+	position:absolute;
+	visibility:hidden;
+	top:0;
+	background:#ffffff;
+	text-align:left;
+	border:1px solid #ccc;
+	-moz-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
 div#rMenu ul li{
-	margin: 1px 0;
 	padding: 0 5px;
 	cursor: pointer;
 	list-style: none outside none;
-	background-color: #DFDFDF;
+	background:#ffffff;
+}
+div#rMenu ul li:hover{
+	background:#08C;
+	color:#fff;
 }
 	</style>
  </HEAD>
@@ -157,11 +170,11 @@ div#rMenu ul li{
 </div>
 <div id="rMenu">
 	<ul>
-		<li id="m_add" onclick="addTreeNode();">增加节点</li>
-		<li id="m_del" onclick="removeTreeNode();">删除节点</li>
-		<li id="m_check" onclick="checkTreeNode(true);">Check节点</li>
-		<li id="m_unCheck" onclick="checkTreeNode(false);">unCheck节点</li>
-		<li id="m_reset" onclick="resetTree();">恢复zTree</li>
+		<li id="m_add" onClick="addTreeNode();">增加节点</li>
+		<li id="m_del" onClick="removeTreeNode();">删除节点</li>
+		<li id="m_check" onClick="checkTreeNode(true);">Check节点</li>
+		<li id="m_unCheck" onClick="checkTreeNode(false);">unCheck节点</li>
+		<li id="m_reset" onClick="resetTree();">恢复zTree</li>
 	</ul>
 </div>
 </BODY>
