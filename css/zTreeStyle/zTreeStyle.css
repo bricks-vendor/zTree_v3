@@ -162,6 +162,7 @@ website:	http://code.google.com/p/jquerytree/
 	 vertical-align: middle;
 	 border:none;
 	 cursor:pointer;
+	 padding:0 0 0 2px;
 }
 .ztree li span.button.chk.checkbox_false_full:before {content: "\f096";}
 .ztree li span.button.chk.checkbox_false_full_focus:before {content: "\f096";}
@@ -187,10 +188,10 @@ website:	http://code.google.com/p/jquerytree/
 .ztree li span.button.roots_open,.ztree li span.button.roots_close,.ztree li span.button.center_open,.ztree li span.button.center_close,.ztree li span.button.center_docu,.ztree li span.button.bottom_docu,.ztree li span.button.bottom_open,.ztree li span.button.bottom_close,.ztree li span.button.root_docu,.ztree li span.button.roots_docu{
 	position:absolute;
 	top:0px;
-	left:20px;
-	width:15px;
+	left:18px;
+	width:20px;
+	z-index:100;
 }
-
 .ztree li.level0> a > span.button.ico_open:before{content: "\f07c";}
 .ztree li.level0> a > span.button.ico_close:before{content: "\f07b";}
 
@@ -202,9 +203,13 @@ website:	http://code.google.com/p/jquerytree/
 
 .ztree li span.button.ico_loading{margin-right:2px; background:url(./img/loading.gif) no-repeat scroll 0 0 transparent; vertical-align:top; *vertical-align:middle}
 
-ul.tmpTargetzTree {background-color:#FFE6B0; opacity:0.8; filter:alpha(opacity=80)}
+ul.tmpTargetzTree {
+	background-color:#FFE6B0;
+	opacity:0.8;
+	filter:alpha(opacity=80);
+}
 
-span.tmpzTreeMove_arrow:before{
+span.tmpzTreeMove_arrow{
 	width:16px;
 	height:16px;
 	display: inline-block;
@@ -212,12 +217,34 @@ span.tmpzTreeMove_arrow:before{
 	margin:2px 0 0 1px;
 	border:0 none;
 	position:absolute;
-	content: "\f061";
+	background-attachment: scroll;
+	font-family: FontAwesome;
+  	font-style: normal;
+  	font-weight: normal;
+  	-webkit-font-smoothing: antialiased;
+  	-moz-osx-font-smoothing: grayscale;
+	background:url(img/arrow.png) 0 0 no-repeat;
 }
 
-ul.ztree.zTreeDragUL {margin:0; padding:0; position:absolute; width:auto; height:auto;overflow:hidden; background-color:#cfcfcf; border:1px #00B83F dotted; opacity:0.8; filter:alpha(opacity=80)}
-.zTreeMask {z-index:10000; background-color:#cfcfcf; opacity:0.0; filter:alpha(opacity=0); position:absolute}
-
+ul.ztree.zTreeDragUL {
+	margin:0;
+	padding:0;
+	position:absolute;
+	width:auto;
+	height:auto;
+	overflow:hidden;
+	background-color:#cfcfcf;
+	border:1px #00B83F dotted;
+	opacity:0.8;
+	filter:alpha(opacity=80);
+}
+.zTreeMask {
+	z-index:10000;
+	background-color:#cfcfcf;
+	opacity:0.0;
+	filter:alpha(opacity=0);
+	position:absolute;
+}
 /* level style*/
 /*.ztree li span.button.level0 {
 	display:none;
