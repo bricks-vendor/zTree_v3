@@ -1220,7 +1220,7 @@
 			html.push("</ul>");
 		},
 		makeUlLineClass: function(setting, node) {
-			return ((setting.view.showLine && !node.isLastNode) ? consts.line.LINE : "");
+			return ((setting.view.showLine) ? consts.line.LINE : "");
 		},
 		removeChildNodes: function(setting, node) {
 			if (!node) return;
